@@ -51,6 +51,7 @@ public class TestSwaggerUI {
                     ctx.assertEquals(200, resp.statusCode());
                     String html = resp.bodyAsString();
                     ctx.assertNotNull(html);
+                    async.complete();
                 });
     }
 
