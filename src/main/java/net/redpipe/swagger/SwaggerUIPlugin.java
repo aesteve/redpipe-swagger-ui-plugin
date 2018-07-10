@@ -9,6 +9,7 @@ public class SwaggerUIPlugin extends Plugin {
 
     @Override
     public Single<Void> deployToResteasy(VertxResteasyDeployment deployment) {
+        deployment.start();
         deployment.getRegistry().addPerInstanceResource(SwaggerUIController.class);
         return Single.just(null);
     }
